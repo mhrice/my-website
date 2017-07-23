@@ -1,23 +1,44 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { HashRouter, Route } from 'react-router-dom';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import './styles/styles.scss';
+
+//components
 import Nav from './components/Nav';
-import { HashRouter } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Projects from './components/Projects';
+
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin();
 
 class App extends Component {
   render() {
     return (
+      <MuiThemeProvider>
       <HashRouter>
       <div className="App">
-        <Nav></Nav>
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
 
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Font+Name">
+    </link>
+        <Nav></Nav>
+
+        <div className="container">
+          <Route exact path="/" component={Home}/>
+          <Route path="/about" component={About}/>
+          <Route path="/projects" component={Projects}/>
+          <Route path="/contact" component={Contact}/>
+        </div>
+
       </div>
       </HashRouter>
+    </MuiThemeProvider>
     );
   }
 }
