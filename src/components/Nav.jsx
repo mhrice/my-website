@@ -1,22 +1,22 @@
-var React = require('react');
-var {Link, IndexLink} = require('react-router');
+import React from 'react';
+import {NavLink} from 'react-router-dom';
 
-var Nav = React.createClass ({
+export default class Nav extends React.Component {
 
 
-  render: function() {
+  render() {
     return (
       <div className="top-bar">
         <div className="top-bar-left">
           <ul className="menu">
             <li className="menu-text">
-              React Timer App
+              Matthew Rice
             </li>
             <li>
-              <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Timer</IndexLink>
+              <NavLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Home</NavLink>
             </li>
             <li>
-              <Link to="/countdown" activeClassName="active"  activeStyle={{fontWeight: 'bold'}}>Countdown</Link>
+              <NavLink to="/about" activeClassName="active"  activeStyle={{fontWeight: 'bold'}}>About</NavLink>
             </li>
           </ul>
         </div>
@@ -30,5 +30,4 @@ var Nav = React.createClass ({
       </div>
     );
   }
-});
-module.exports = Nav;
+};
