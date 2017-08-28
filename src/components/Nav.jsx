@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import MyLogo from '../resources/my-logo.png';
 
 
 export default class Nav extends React.Component {
@@ -12,7 +13,7 @@ export default class Nav extends React.Component {
           <ul className="menu">
 
             <li>
-              <NavLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}} className="menu-text">Matthew Rice</NavLink>
+              <NavLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}} className="menu-text"><img src = {MyLogo} style={{height:"24px", width: "50px", marginTop: "-2%"}} alt="my-logo"/></NavLink>
             </li>
             <li>
               <NavLink to="/about" activeClassName="active"  activeStyle={{fontWeight: 'bold'}} className="menu-text">About Me</NavLink>

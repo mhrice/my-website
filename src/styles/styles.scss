@@ -1,10 +1,88 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 .menu {
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-left: 1%;
  list-style-type: none;
  display: flex;
-   border: 5px solid goldenrod;
+// background-color: #70A0B4;
 justify-content: space-between;
+margin: 0px;
+opacity: 1;
+background-size: cover;
 }
 .menu-text {
 
+text-decoration: none;
 margin-right: 20px;
+
+
+}
+.menu-text:visited { text-decoration: none; color:black; }
+
+.home-container {
+  display: flex;
+  // border: 2px solid blue;
+  min-height: 93vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+.home-title-text{
+// border: 2px solid goldenrod;
+display: flex;
+justify-content: center;
+overflow-wrap: break-word;
+overflow:visible;
+// max-width: 80%;
+// min-height: 200px;
+font-size: 40px;
+margin-top: -10%;
+
+}
+
+.home-image {
+  z-index: -999;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+
+p, h1 {
+  font-family: 'Muli', sans-serif;
+}
+
+.home-link {
+ text-decoration: none;
+ color: blue;
+:visited { text-decoration: none; color: blue;}
+:hover { text-decoration: none; color: blue;}
+:focus { text-decoration: none; color: blue;}
+:hover, :active { text-decoration: none; color: blue;}
+}
+
+.about-container {
+  min-width: 100%;
+  padding-bottom: 20%;
+  height: 50vh;
+}
+
+.about-header {
+  padding-left: 1%;
+}
+
+.card {
+  margin-bottom: 1%;
+}
+
+.about-text {
+  padding-left: 1%;
 }
