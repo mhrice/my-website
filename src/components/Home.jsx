@@ -13,8 +13,8 @@ export default class Home extends React.Component {
       Matthew Rice
       </h1>
       <p className = "home-paragraph"> I specialize in&nbsp;
-      <Link className="home-link" to={"www.google.com"}>web development</Link>,&nbsp;
-      <Link className="home-link" to={"www.google.com"}>audio technology</Link>, and&nbsp;
+      <Link className="home-link" to={"www.google.com"}>audio technology</Link>,&nbsp;
+      <Link className="home-link" to={"www.google.com"}>web development</Link>, and&nbsp;
       <Link className="home-link" to={"www.google.com"}>embeded systems</Link>
        </p>
       </div>

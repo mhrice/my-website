@@ -68,7 +68,10 @@ export default class About extends React.Component {
       production and audio signal processing. I also enjoy web development and embeded systems.
 
       </p>
-      {this.renderCards()}
+
+
+        {this.renderCards()}
+
       </div>
     )
   }

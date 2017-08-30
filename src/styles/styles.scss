@@ -81,8 +81,124 @@ p, h1 {
 
 .card {
   margin-bottom: 1%;
+
 }
 
 .about-text {
   padding-left: 1%;
+}
+
+.example-enter {
+    height: 0px;
+}
+
+.example-enter.example-enter-active {
+  height: 25.75%;
+  transition: height 1500ms ease-in;
+}
+
+.projects-container {
+    min-width: 100%;
+    padding-bottom: 20%;
+    height: 50vh;
+    // border: 2px solid goldenrod;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.div1{
+      // background-color: green;
+      flex: 1;
+      flex-basis: 100px;
+      min-height: 100%;
+      display: flex;
+      justify-content: center;
+}
+
+.div2{
+      background-color: blue;
+      flex: 1;
+      // flex-basis: 100px;
+      min-height: 200%;
+      display: flex;
+      justify-content:center;
+      flex-direction: column;
+      align-items: center;
+
+}
+
+.div3{
+      background-color: red;
+      flex: 1;
+      flex-basis: 100px;
+      min-height: 100%;
+
+}
+
+.div4{
+      background-color: orange;
+      flex: 1;
+      flex-basis: 100px;
+      min-height: 100%;
+
+}
+
+.div5{
+      background-color: yellow;
+      flex: 1;
+      flex-basis: 100px;
+      min-height: 100%;
+
+}
+
+.div6{
+      background-color: purple;
+      flex: 1;
+      flex-basis: 100px;
+      min-height: 100%;
+
+}
+
+.div7{
+      background-color: pink;
+      flex: 1;
+      flex-basis: 100px;
+      min-height: 100%;
+
+}
+.project-header{
+  flex:1 1;
+  margin-bottom: -1.5%;
+}
+.project-subheader{
+  flex: 1 1;
+
+  // margin-top: -2%;
+  font-style: italic;
+}
+.project-discription {
+  margin-top: -0.5%;
+  flex:5 5;
+  // border: 2px solid red;
+}
+.project-img {
+
+  flex:1 1 250px;
+  width: 30%;
+  height: 40%;
+  margin-top: 4rem;
+  margin-bottom: -1%;
+
+
+  @media only screen and (max-width: 600px) {
+    max-height: 20%;
+
+  }
+
+  .project-button{
+    flex: 5 5;
+    margin-bottom: -1%;
+  }
 }
