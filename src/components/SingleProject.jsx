@@ -13,7 +13,7 @@ handleClick(buttonLink){
 
 render() {
   var {color, picture, headerText, subHeaderText, bodyText, buttonLink} = this.props;
-  console.log({color})
+
   return (
 
     <div className="div2" style={{backgroundColor:color}}>
