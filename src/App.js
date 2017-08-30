@@ -4,7 +4,9 @@ import './App.css';
 import { HashRouter, Route } from 'react-router-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import './styles/styles.scss';
+// import './styles/styles.scss';
+import './styles/styles.css';
+
 
 //components
 import Nav from './components/Nav';
