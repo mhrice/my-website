@@ -1,7 +1,7 @@
 import React from 'react';
 import MyCard from './Card';
 import UCSDLogo from "../resources/UCSD-logo.png";
-import '../styles/styles.scss';
+// import '../styles/styles.scss';
 import {Link} from 'react-router-dom';
 
 export default class About extends React.Component {
