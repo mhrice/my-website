@@ -10,12 +10,16 @@ export default class MyCard extends React.Component {
   constructor(){
     super();
     this.state = {
-      mounted: false
+      mounted: false,
+      height: {}
     }
   }
 
     componentDidMount() {
-        this.setState({ mounted: true });
+        this.setState({ mounted: true});
+        setTimeout(()=>{
+          this.setState({height: {height:'30%'}})
+        }, 500)
     }
 
 
@@ -24,13 +28,20 @@ export default class MyCard extends React.Component {
     var child;
     if(this.state.mounted){
       child = (
-      <Card className="card" key={1}>
+      <Card className="card" key={1} style={this.state.height} onExpandChange= { () =>{
+        this.setState({
+          height: {}
+        });
+
+      } } >
       <CardHeader
         title={Title}
         avatar={Logo}
         actAsExpander={true}
-        showExpandableButton={true} />
-        <CardTitle title={cardTitle} subtitle={cardSubtitle} expandable={true} />
+        showExpandableButton={true}
+
+         />
+        <CardTitle title={cardTitle} subtitle={cardSubtitle} expandable={true}  />
         <CardText expandable={true}>
         {cardText}
         </CardText>
@@ -44,8 +55,10 @@ export default class MyCard extends React.Component {
     return (
       <ReactCSSTransitionGroup
       transitionName="example"
-      transitionEnterTimeout={1500}
-      transitionLeaveTimeout={300}>
+      transitionEnterTimeout={700}
+      transitionLeaveTimeout={300}
+
+      >
                 {child}
       </ReactCSSTransitionGroup>
   );
