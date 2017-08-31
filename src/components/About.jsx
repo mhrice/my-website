@@ -12,7 +12,7 @@ export default class About extends React.Component {
       Title: "Education",
       Logo: UCSDLogo,
       cardTitle: "UCSD",
-      cardSubtitle: "B.S. Electrical Engineering Class of 2019",
+      cardSubtitle: "B.S. Electrical Engineering Class of 2019 Minor in Music",
       cardText: "YAY",
       key: 1
 

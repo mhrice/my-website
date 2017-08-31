@@ -27,7 +27,7 @@ margin-right: 20px;
 .home-container {
   display: flex;
   /*// border: 2px solid blue;*/
-  min-height: 93vh;
+  min-height: 92vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -72,7 +72,8 @@ p, h1 {
 .about-container {
   min-width: 100%;
   padding-bottom: 20%;
-  height: 50vh;
+  height: 46vh;
+  /*max-height: 100vh;*/
 }
 
 .about-header {
@@ -83,10 +84,6 @@ p, h1 {
   margin-bottom: 1%;
 /*transition: height cubic-bezier(0.23, 1, 0.32, 1);*/
 /*height: 30%;  */
-
-}
-.card{
-  /*height: 30%;*/
 
 }
 
