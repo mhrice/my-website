@@ -22,7 +22,10 @@ constructor(){
   super()
   this.state = {
     errorText: '',
+    firstName: '',
+    lastName: '',
     email:'',
+    message: '',
     open: false
   }
 }
@@ -35,10 +38,17 @@ handleClick(){
     });
   }
   else {
-    this.setState({
-    errorText: "",
-    open: true
-    });
+    setTimeout(()=>{
+      this.setState({
+      errorText: "",
+      open: true,
+      firstName: "",
+      lastName: "",
+      email:'',
+      message: ''
+      });
+    }, 500);
+
   }
 }
 handleRequestClose(){
@@ -55,9 +65,13 @@ handleRequestClose(){
       </h1>
       <p> Fill out this form, or simply <Link className="home-link" to={"www.google.com"}>email</Link> me </p>
       <Paper zDepth={2} className="contact-form-container">
-    <TextField style={style} underlineShow={false} floatingLabelText="First Name" />
+    <TextField style={style} underlineShow={false} floatingLabelText="First Name"
+    value={this.state.firstName}
+    onChange={(event: object, newValue: string)=>{this.setState({firstName: newValue})}}/>
     <Divider />
-    <TextField style={style} underlineShow={false} floatingLabelText="Last Name"/>
+    <TextField style={style} underlineShow={false} floatingLabelText="Last Name"
+    value={this.state.lastName}
+    onChange={(event: object, newValue: string)=>{this.setState({lastName: newValue})}}/>
     <Divider />
     <TextField style={style} underlineShow={false} floatingLabelText="Email"
     errorText={this.state.errorText}
@@ -65,7 +79,10 @@ handleRequestClose(){
     onChange={(event: object, newValue: string)=>{this.setState({email: newValue})}}/>
     <Divider />
     <TextField style={style} underlineShow={false} floatingLabelText="Message"
-    className="contact-form-message" multiLine={true}
+    className="contact-form-message"
+    value={this.state.message}
+    onChange={(event: object, newValue: string)=>{this.setState({message: newValue})}}
+    multiLine={true}
     rows={2}
     rowsMax={4}/>
     <Divider />
