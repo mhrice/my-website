@@ -27,7 +27,7 @@ render() {
     <p className="project-discription">
     {bodyText}
     </p>
-    <RaisedButton label="View on Github" style={{marginBottom: "2%"}} onClick={()=>{this.handleClick(buttonLink)} } />
+    <RaisedButton label="Submit" style={{marginBottom: "2%"}} onClick={()=>{this.handleClick(buttonLink)} } />
     </div>
   )
 }

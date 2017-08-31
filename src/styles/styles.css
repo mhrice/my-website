@@ -204,8 +204,38 @@ p, h1 {
 
   }
 
-  .project-button{
-    flex: 5 5;
-    margin-bottom: -1%;
-  }
+
+}
+/*.project-button{
+  flex: 5 5;
+  margin-bottom: -10%;
+}*/
+
+.contact-container {
+  min-width: 100%;
+  /*padding-bottom: 20%;*/
+  height: 90vh;
+  /*// border: 2px solid goldenrod;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+
+}
+.contact-title {
+  /*align-self: center;*/
+  margin-bottom: -1%;
+
+}
+.contact-form-container {
+  min-width: 50%;
+  margin-bottom: 5%;
+}
+.contact-form-message {
+  /*padding-top: 0%;*/
+  /*margin-bottom: 5%*/
+
+}
+.contact-submit-button {
+  margin-top: -3%;
 }
