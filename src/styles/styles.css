@@ -105,27 +105,19 @@ p, h1 {
 }
 
 .projects-container {
-    min-width: 100%;
-    padding-bottom: 20%;
-    height: 50vh;
-    /*// border: 2px solid goldenrod;*/
-    display: flex;
-    flex-direction: column;
-
-
+  min-width: 100%;
+  padding-bottom: 20%;
+  height: 50vh;
+  /*// border: 2px solid goldenrod;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
 }
 
-.div1{
-      /*// background-color: green;*/
-      flex: 1;
-      flex-basis: 100px;
-      min-height: 100%;
-      display: flex;
-      justify-content: center;
-}
 
 .div2{
-      background-color: blue;
+      /*background-color: blue;*/
       flex: 1;
       /*// flex-basis: 100px;*/
       min-height: 200%;
@@ -135,46 +127,10 @@ p, h1 {
       align-items: center;
 
 }
-
-.div3{
-      background-color: red;
-      flex: 1;
-      flex-basis: 100px;
-      min-height: 100%;
-
+#projects-first-div {
+/*background-color: #7BAAD0;*/
 }
 
-.div4{
-      background-color: orange;
-      flex: 1;
-      flex-basis: 100px;
-      min-height: 100%;
-
-}
-
-.div5{
-      background-color: yellow;
-      flex: 1;
-      flex-basis: 100px;
-      min-height: 100%;
-
-}
-
-.div6{
-      background-color: purple;
-      flex: 1;
-      flex-basis: 100px;
-      min-height: 100%;
-
-}
-
-.div7{
-      background-color: pink;
-      flex: 1;
-      flex-basis: 100px;
-      min-height: 100%;
-
-}
 .project-header{
   flex:1 1;
   margin-bottom: -1.5%;

@@ -4,19 +4,32 @@ import RaisedButton from 'material-ui/RaisedButton';
 export default class SingleProject extends React.Component {
 //props:
 //color, picture, headerText, subHeaderText, bodyText, buttonLink
-
+constructor(){
+  super()
+  this.state = {id:""}
+}
 
 handleClick(buttonLink){
 
   window.location.href=buttonLink;
 }
 
+componentDidMount(){
+  var theKey = this.props.theKey;
+  if(theKey===1) {
+    this.setState({
+      id: "projects-first-div"
+    })
+  }
+}
+
 render() {
   var {color, picture, headerText, subHeaderText, bodyText, buttonLink} = this.props;
+  if(!color) color = "none";
 
   return (
 
-    <div className="div2" style={{backgroundColor:color}}>
+    <div className="div2" style={{backgroundColor:color}} id={this.state.id}>
     <img src={picture} alt="fake" className="project-img"></img>
     <h1 className="project-header">
     {headerText}

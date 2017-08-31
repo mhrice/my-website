@@ -9,7 +9,7 @@ export default class Projects extends React.Component {
   renderProjects() {
     let projects = [
       {
-        color: "blue",
+        color: "#7BAAD0",
         picture: igm,
         headerText: "Header",
         subHeaderText: "Sub",
@@ -86,6 +86,7 @@ export default class Projects extends React.Component {
         bodyText={project.bodyText}
         buttonLink={project.buttonLink}
         key={project.key}
+        theKey={project.key}
         />
       )
     });
@@ -97,6 +98,7 @@ export default class Projects extends React.Component {
   render() {
     return (
       <div className="projects-container">
+      <h1>Projects</h1>
       {this.renderProjects()}
 
       </div>
