@@ -18,6 +18,9 @@ html {
 /*::-webkit-scrollbar-thumb {
     background: #FF0000;
 }*/
+p, h1, h2, h3, h4, h5, div {
+  font-family: 'Muli', sans-serif;
+}
 
 .container {
   display: flex;
@@ -38,7 +41,7 @@ margin-bottom: -40%;
 /*background-size: cover;*/
 }
 .menu-text {
-
+flex: 1;
 text-decoration: none;
 margin-right: 20px;
 
@@ -57,17 +60,15 @@ margin-right: 20px;
   /*padding-top: 4%;*/
 
   /*padding-bottom: 20%;*/
-  height: 100vh;
+  height: 85vh;
   /*z-index: 3;*/
 }
-
-
-
 
 .home-title-text{
 /*// border: 2px solid goldenrod;*/
 display: flex;
 justify-content: center;
+align-items: center;
 overflow-wrap: break-word;
 overflow:visible;
 /*// max-width: 80%;*/
@@ -88,10 +89,6 @@ margin-top: -10%;
     /*background-size: cover;*/
 }
 
-p, h1, h2, h3, h4, h5, div {
-  font-family: 'Muli', sans-serif;
-}
-
 .home-link {
  text-decoration: none;
  color: blue;
@@ -103,6 +100,23 @@ p, h1, h2, h3, h4, h5, div {
 .home-link:hover {
   text-decoration: none;
   color: white;
+  /*min-height: 0!important;*/
+}
+.home-paragraph {
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+  /*margin-left: 1%;*/
+  /*margin-right: 1%;*/
+
+}
+@media only screen and (max-width: 800px) {
+  .home-paragraph {
+    /*padding-bottom: 40%; */
+    /*padding-left: 50px;*/
+    /*padding-right: 50px;*/
+    }
+
 }
 
 .about-container {
@@ -213,7 +227,7 @@ p, h1, h2, h3, h4, h5, div {
   padding-top: 4%;
 
   /*padding-bottom: 20%;*/
-  height: 90vh;
+  height: 85vh;
   /*margin-bottom: 7%;*/
   /*// border: 2px solid goldenrod;*/
   display: flex;
