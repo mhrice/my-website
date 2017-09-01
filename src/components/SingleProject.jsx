@@ -29,8 +29,8 @@ render() {
 
   return (
 
-    <div className="div2" style={{backgroundColor:color}} id={this.state.id}>
-    <img src={picture} alt="fake" className="project-img"></img>
+    <div className="div2" style={{backgroundColor:color}} >
+    <img src={picture} alt="fake" className="project-img" id={this.state.id}></img>
     <h1 className="project-header">
     {headerText}
     </h1>
@@ -40,7 +40,7 @@ render() {
     <p className="project-discription">
     {bodyText}
     </p>
-    <RaisedButton label="Submit" style={{marginBottom: "2%"}} onClick={()=>{this.handleClick(buttonLink)} } />
+    <RaisedButton label="View On Github" style={{marginBottom: "2%"}} onClick={()=>{this.handleClick(buttonLink)} } />
     </div>
   )
 }

@@ -5,10 +5,11 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Snackbar from 'material-ui/Snackbar';
 import {Link} from 'react-router-dom';
-
+import * as moment from 'moment';
+var firebase = require('../config/firebase');
 
 var validator = require("email-validator");
-
+var database = firebase.database();
 
 
 const style = {
@@ -29,7 +30,15 @@ constructor(){
     open: false
   }
 }
-
+uploadMessage(firstName, lastName, email, message, timestamp) {
+  database.ref(`messages/${lastName}`).set({
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    message: message,
+    timestamp: timestamp
+  });
+}
 handleClick(){
 // let email = "hi";
   if(!validator.validate(this.state.email)){
@@ -38,6 +47,9 @@ handleClick(){
     });
   }
   else {
+    let {firstName, lastName, email, message} = this.state;
+    let now = moment().format('MMMM Do YYYY, h:mm:ss a');
+    this.uploadMessage(firstName, lastName, email, message, now)
     setTimeout(()=>{
       this.setState({
       errorText: "",

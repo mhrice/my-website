@@ -9,7 +9,7 @@ export default class Projects extends React.Component {
   renderProjects() {
     let projects = [
       {
-        color: "#7BAAD0",
+        color: "",
         picture: igm,
         headerText: "Header",
         subHeaderText: "Sub",

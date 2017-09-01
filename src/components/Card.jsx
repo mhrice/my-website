@@ -18,7 +18,7 @@ export default class MyCard extends React.Component {
     componentDidMount() {
         this.setState({ mounted: true});
         setTimeout(()=>{
-          this.setState({height: {height:'30%'}})
+          this.setState({height: {height:'15%'}})
         }, 500)
     }
 
