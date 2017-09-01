@@ -30,13 +30,14 @@ constructor(){
     open: false
   }
 }
-uploadMessage(firstName, lastName, email, message, timestamp) {
-  database.ref(`messages/${lastName}`).set({
+uploadMessage(firstName, lastName, email, message, timestamp, unixTime) {
+  database.ref(`messages/${0-unixTime}`).set({
     firstName: firstName,
     lastName: lastName,
     email: email,
     message: message,
-    timestamp: timestamp
+    timestamp: timestamp,
+    unixTime: 0-unixTime
   });
 }
 handleClick(){
@@ -48,8 +49,9 @@ handleClick(){
   }
   else {
     let {firstName, lastName, email, message} = this.state;
-    let now = moment().format('MMMM Do YYYY, h:mm:ss a');
-    this.uploadMessage(firstName, lastName, email, message, now)
+    let now1 = moment().format('MMMM Do YYYY, h:mm:ss a');
+    let unixTime = moment().unix();
+    this.uploadMessage(firstName, lastName, email, message, now1, unixTime)
     setTimeout(()=>{
       this.setState({
       errorText: "",

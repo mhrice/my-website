@@ -1,7 +1,6 @@
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
-import * as moment from 'moment';
 var firebase = require('../config/firebase');
 var database = firebase.database();
 
@@ -41,16 +40,17 @@ downloadEmails(){
   emailRef.once('value', function(snapshot) {
 
     snapshot.forEach(function(childSnapshot) {
-      let stamp = childSnapshot.val().timestamp;
-      console.log(stamp);
-      let m = moment(stamp, 'MMMM Do YYYY, h:mm:ss a');
-      let formatStamp = m.format("X");
+      let stamp = childSnapshot.val().unixTime;
+      // let stamp = childSnapshot.val().timestamp;
+      // console.log(stamp);
+      // let m = moment(stamp, 'MMMM Do YYYY, h:mm:ss a');
+      // let formatStamp = m.format("X");
       // console.log(formatStamp);
       // var childKey = childSnapshot.key;
       // var childData = childSnapshot.val();
       emails.push({
         ...childSnapshot.val(),
-        key: formatStamp
+        key: stamp
         }
       )
 
