@@ -4,10 +4,8 @@ import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Snackbar from 'material-ui/Snackbar';
-import {Link} from 'react-router-dom';
 import * as moment from 'moment';
 var firebase = require('../config/firebase');
-
 var validator = require("email-validator");
 var database = firebase.database();
 
@@ -77,7 +75,8 @@ handleRequestClose(){
       <h1 className="contact-title">
         Contact Me
       </h1>
-      <p> Fill out this form, or simply <Link className="home-link" to={"www.google.com"}>email</Link> me </p>
+      <p className="contact-paragraph"> Fill out this form, or simply&nbsp;
+      <a href="mailto:matthewrice11@yahoo.com" target="_top" className="home-link">email</a> me </p>
       <Paper zDepth={2} className="contact-form-container">
     <TextField style={style} underlineShow={false} floatingLabelText="First Name"
     value={this.state.firstName}

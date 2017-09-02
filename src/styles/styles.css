@@ -44,6 +44,7 @@ margin-bottom: -40%;
 flex: 1;
 text-decoration: none;
 margin-right: 20px;
+font-size: 18px;
 
 
 }
@@ -92,6 +93,7 @@ margin-top: -10%;
 .home-link {
  text-decoration: none;
  color: blue;
+ margin-bottom: 10%;
 /*:visited { text-decoration: none; color: blue;}
 :hover { text-decoration: none; color: white; background-color: black}
 :focus { text-decoration: none; color: blue;color: white; background-color: black}
@@ -106,6 +108,7 @@ margin-top: -10%;
   display: flex;
   justify-content: center;
   min-height: 100px;
+  font-size: 18px;
   /*margin-left: 1%;*/
   /*margin-right: 1%;*/
 
@@ -239,7 +242,9 @@ margin-top: -10%;
 .contact-title {
   /*align-self: center;*/
   margin-bottom: -0.5%;
-
+}
+.contact-paragraph {
+  /*font-size: 16px;*/
 }
 .contact-form-container {
   min-width: 50%;
