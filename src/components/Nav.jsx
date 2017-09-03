@@ -20,7 +20,7 @@ showMenu(){
     menu: !this.state.menu,
     showIcon: !this.state.showIcon
   });
-  console.log("YOooo")
+  // console.log("YOooo")
 
 }
 
@@ -44,7 +44,7 @@ renderMenu(){
       showMenuIconButton = {this.state.showIcon}
       onLeftIconButtonTouchTap = {this.showMenu.bind(this)}
       >
-      <button onClick= {this.showMenu.bind(this)} className="hidden-button"> </button>  
+      <button onClick= {this.showMenu.bind(this)} className="hidden-button"> </button>
 
       </AppBar>
 
