@@ -2,13 +2,57 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import MyLogo from '../resources/my-logo.png';
 import Avatar from 'material-ui/Avatar';
+import AppBar from 'material-ui/AppBar';
+
+
+import MyMenu from './Menu';
+
+var MediaQuery = require('react-responsive');
 
 export default class Nav extends React.Component {
+  constructor(){
+    super();
+    this.state = {menu: false, showIcon:true}
+  }
+
+showMenu(){
+  this.setState({
+    menu: !this.state.menu,
+    showIcon: !this.state.showIcon
+  });
+  console.log("YOooo")
+
+}
 
 
+
+renderMenu(){
+  if(this.state.menu) {
+    return (
+          <MyMenu onClick={()=>{this.showMenu()}} />
+
+        )
+      }
+}
   render() {
     return (
       <div>
+
+      <MediaQuery maxDeviceWidth={800}>
+      <AppBar
+      className="nav-app-bar"
+      showMenuIconButton = {this.state.showIcon}
+      onLeftIconButtonTouchTap = {this.showMenu.bind(this)}
+      >
+      <button onClick= {this.showMenu.bind(this)} className="hidden-button"> </button>  
+
+      </AppBar>
+
+      {this.renderMenu()}
+      </MediaQuery>
+      <MediaQuery minDeviceWidth={800}>
+
+
         <div>
           <ul className="menu">
 
@@ -26,7 +70,7 @@ export default class Nav extends React.Component {
             </li>
           </ul>
         </div>
-
+  </MediaQuery>
       </div>
     );
   }

@@ -6,7 +6,6 @@ import EducationLogo from "../resources/books.svg";
 import InterestsLogo from "../resources/heart.svg";
 import SkillsPic from "../resources/sup.svg";
 // import '../styles/styles.scss';
-import {Link} from 'react-router-dom';
 
 export default class About extends React.Component {
 
