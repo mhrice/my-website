@@ -46,11 +46,12 @@ export default class About extends React.Component {
       cardText:
       <ul>
       <li id="education-list-text">Web App Development</li>
-      <li id="education-list-text">Data Science</li>
-      <li id="education-list-text">Machine Learning</li>
+      <li id="education-list-text">Data Science/Machine Learning</li>
       <li id="education-list-text">Music Production</li>
       <li id="education-list-text">Classical Piano</li>
       <li id="education-list-text">Digital Signal Processing</li>
+      <li id="education-list-text">Live Sound</li>
+
       </ul>,
       key: 3
     }

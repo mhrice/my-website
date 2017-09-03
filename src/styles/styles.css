@@ -33,6 +33,15 @@ p, h1, h2, h3, h4, h5, div {
       min-height: 200px;
 
     }
+    .project-img {
+      width: 100%!important;
+    }
+    .project-header{
+      font-size: 20px;
+    }
+    .project-technologies {
+      font-size: 14px!important;
+    }
 
 
 }
@@ -265,8 +274,11 @@ margin-top: -10%;
 }
 
 .project-header{
-  flex:1 1;
+  flex:1 5;
   margin-bottom: -1.5%;
+  display: flex;
+  align-self: center;
+  /*flex-wrap: wrap;*/
 }
 .project-subheader{
   flex: 1 1;
@@ -275,26 +287,32 @@ margin-top: -10%;
   font-style: italic;
 }
 .project-discription {
-  margin-top: -0.5%;
-  flex:5 5;
+  margin: -0.5% 4% 0% 4%;
+  flex:5 3;
+  display: flex;
+
   /*// border: 2px solid red;*/
 }
 .project-img {
 
   flex:1 1 250px;
-  width: 30%;
+  width: 40%;
   height: 40%;
   margin-top: 4rem;
   margin-bottom: -1%;
 
 
-  @media only screen and (max-width: 600px) {
-    max-height: 20%;
-
-  }
-
 
 }
+.project-technologies {
+  font-size: 16px;
+  margin: 1% 4%;
+  flex-basis: 50px;
+  display: flex;
+
+}
+
+
 /*.project-button{
   flex: 5 5;
   margin-bottom: -10%;

@@ -11,7 +11,7 @@ constructor(){
 
 handleClick(buttonLink){
 
-  window.location.href=buttonLink;
+  window.location=buttonLink;
 }
 
 componentDidMount(){
@@ -24,7 +24,7 @@ componentDidMount(){
 }
 
 render() {
-  var {color, picture, headerText, subHeaderText, bodyText, buttonLink} = this.props;
+  var {color, picture, headerText, subHeaderText, bodyText, technologiesText, buttonLink, buttonText} = this.props;
   if(!color) color = "none";
 
   return (
@@ -40,7 +40,10 @@ render() {
     <p className="project-discription">
     {bodyText}
     </p>
-    <RaisedButton label="View On Github" style={{marginBottom: "2%"}} onClick={()=>{this.handleClick(buttonLink)} } />
+    <h3 className="project-technologies">
+    Tools: {technologiesText}
+    </h3>
+    <RaisedButton label={buttonText} style={{marginBottom: "2%"}} onClick={()=>{this.handleClick(buttonLink)} } />
     </div>
   )
 }
