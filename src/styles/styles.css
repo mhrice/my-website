@@ -147,6 +147,32 @@ margin-top: -10%;
   padding-left: 1%;
 }
 
+#education-list {
+  font-size: 18px;
+}
+
+#education-list-text {
+  font-size: 16px;
+
+}
+.ucsd-title {
+  display: flex;
+  align-items: center;
+}
+.ucsd-logo {
+  width: 35px;
+  height: 35px;
+  margin-left: 1%;
+}
+.skills-div {
+  display: flex;
+  justify-content: center;
+}
+.skills-pic {
+  width: 75%;
+
+}
+
 .example-enter {
     height: 0%;
 }

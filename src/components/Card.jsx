@@ -24,7 +24,7 @@ export default class MyCard extends React.Component {
 
 
   render(){
-    var{Title, Logo, cardTitle, cardSubtitle, cardText, secondCardTitle, secondCardText} = this.props;
+    var{Title, Logo, cardTitle, cardSubtitle, cardText} = this.props;
     var child;
     if(this.state.mounted){
       child = (
@@ -45,10 +45,10 @@ export default class MyCard extends React.Component {
         <CardText expandable={true}>
         {cardText}
         </CardText>
-        <CardTitle title={secondCardTitle} expandable={true} />
+         {/*<CardTitle title={secondCardTitle} expandable={true} />
         <CardText expandable={true}>
         {secondCardText}
-        </CardText>
+        </CardText> */}
       </Card>
       )
     }
