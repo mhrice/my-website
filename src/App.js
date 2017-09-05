@@ -25,12 +25,6 @@ injectTapEventPlugin();
 
 class App extends Component {
 
-  handleClick(hidden){
-    console.log(hidden);
-    // this.setState({
-    //   hidden: hidden
-    // })
-  }
   render() {
     return (
       <MuiThemeProvider>

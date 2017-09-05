@@ -197,7 +197,11 @@ margin-top: -10%;
   margin-bottom: 1%;
 /*transition: height cubic-bezier(0.23, 1, 0.32, 1);*/
 /*height: 30%;  */
+  user-select: none;
 
+}
+.card  * {
+  cursor: default;
 }
 
 .about-text {
@@ -206,6 +210,7 @@ margin-top: -10%;
 
 #education-list {
   font-size: 18px;
+  cursor: default;
 }
 
 #education-list-text {

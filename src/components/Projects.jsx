@@ -5,6 +5,8 @@ import igm from '../resources/test.jpg';
 import RFID from '../resources/rfid.png';
 import TODO from '../resources/todo-app.png';
 import Tower from '../resources/tower.png';
+import MIDI from '../resources/midi-controller.png';
+import BachJam from '../resources/back-jam.png';
 
 export default class Projects extends React.Component {
   //color, picture, headerText, subHeaderText, bodyText, buttonLink
@@ -63,20 +65,38 @@ export default class Projects extends React.Component {
       },
       {
         color: "purple",
-        picture: igm,
-        headerText: "Header",
-        subHeaderText: "Sub",
-        bodyText: "This is a body paragraph.",
-        buttonLink: "www.google.com",
+        picture: BachJam,
+        headerText: "Bach Little Fugue in Gm Jam",
+        subHeaderText: "My Final Project for MUS172",
+        bodyText: "This was a fun electronic performace based on Bach's four-voice\
+        organ piece: 'Little' Fugue in G minor. Using Pure Data, I first created four\
+        seperate organ patches and programmed them to play each voice's individual\
+        MIDI data. I then created my own synth to 'jam' on top of the original voices.\
+        Next I constructed a drum sequencer, and for the live performace, I 'sang' in\
+        beatbox style drums and programed the drums to hit on different beats of\
+        each measure. I also produced audio effects to layer at various points\
+        including filtering, tremolo, and flanger as well as an eq. Finally, I\
+        mapped all of the controls to my Novation LaunchKey 49 and performed my\
+        jam with an annotated score.",
+        technologiesText: 'Pure Data, Novation LaunchKey 49',
+        buttonLink: "https://github.com/mhrice/MUS172Final",
+        buttonText: "View On Github",
         key: 4
       },
       {
         color: "orange",
-        picture: igm,
-        headerText: "Header",
-        subHeaderText: "Sub",
-        bodyText: "This is a body paragraph.",
-        buttonLink: "www.google.com",
+        picture: MIDI,
+        headerText: "Arduino Sampler and Effects",
+        subHeaderText: "My Final Project for MUS171",
+        bodyText: "I created an audio tool that would record samples with a\
+        microphone and then given the user the ability to play back the samples \
+        and add on effects. These effects included distortion, filtering, \
+        bitcrushing, and tempo changes. The user was provided with haptic and \
+        visual feedback using buttons and LEDs as well as a potentiometer and a \
+        multi-colored LED for individual parameter control.",
+        technologiesText: 'Arduino, Pure Data',
+        buttonLink: "https://github.com/mhrice/MUS172Final",
+        buttonText: "View On Github",
         key: 5
       },
       {
