@@ -1,6 +1,6 @@
 import React from 'react';
 // import '../styles/styles.scss';
-import '../styles/styles.css';
+// import '../styles/styles.scss';
 import { HashLink as Link } from 'react-router-hash-link';
 
 export default class Home extends React.Component {

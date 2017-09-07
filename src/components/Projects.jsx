@@ -1,6 +1,6 @@
 import React from 'react';
 import SingleProject from './SingleProject';
-import igm from '../resources/test.jpg';
+// import igm from '../resources/test.jpg';
 
 import RFID from '../resources/rfid.png';
 import TODO from '../resources/todo-app.png';
