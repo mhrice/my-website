@@ -47,7 +47,10 @@ export default class About extends React.Component {
       <ul>
       <li id="education-list-text">Web App Development</li>
       <li id="education-list-text">Data Science/Machine Learning</li>
-      <li id="education-list-text">Music Production</li>
+      <li id="education-list-text">Music Production
+      (click <a href="https://www.soundcloud.com/matthew-rice-6" className="soundcloud-link" >here</a> for a link to my SoundCloud)
+
+      </li>
       <li id="education-list-text">Classical Piano</li>
       <li id="education-list-text">Digital Signal Processing</li>
       <li id="education-list-text">Live Sound</li>

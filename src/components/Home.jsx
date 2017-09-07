@@ -1,7 +1,7 @@
 import React from 'react';
 // import '../styles/styles.scss';
 import '../styles/styles.css';
-import {Link} from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 export default class Home extends React.Component {
 
@@ -14,9 +14,9 @@ export default class Home extends React.Component {
       Matthew Rice
       </h1>
       <p className = "home-paragraph"> I specialize in&nbsp;
-      <Link className="home-link" to={"www.google.com"}>web development</Link>,&nbsp;
-      <Link className="home-link" to={"www.google.com"}>audio technology</Link>, and&nbsp;
-      <Link className="home-link" to={"www.google.com"}>embeded systems</Link>
+      <Link className="home-link" to={"/projects#web-dev"} >web development</Link>,&nbsp;
+      <Link className="home-link" to={"/projects#audio"}>audio technology</Link>, and&nbsp;
+      <Link className="home-link" to={"/projects#embeded"}>embeded systems</Link>
        </p>
       </div>
 

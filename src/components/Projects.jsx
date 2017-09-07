@@ -7,6 +7,7 @@ import TODO from '../resources/todo-app.png';
 import Tower from '../resources/tower.png';
 import MIDI from '../resources/midi-controller.png';
 import BachJam from '../resources/back-jam.png';
+import Rooftops from '../resources/rooftops.jpg';
 
 export default class Projects extends React.Component {
   //color, picture, headerText, subHeaderText, bodyText, buttonLink
@@ -45,6 +46,7 @@ export default class Projects extends React.Component {
         technologiesText: 'React, Redux, Firebase, Heroku',
         buttonLink: "https://github.com/mhrice/React-todo",
         buttonText: "View On Github",
+        anchorId: "web-dev",
         key: 2
       },
       {
@@ -67,7 +69,7 @@ export default class Projects extends React.Component {
         color: "purple",
         picture: BachJam,
         headerText: "Bach Little Fugue in Gm Jam",
-        subHeaderText: "My Final Project for MUS172",
+        subHeaderText: "Audio Programmer",
         bodyText: "This was a fun electronic performace based on Bach's four-voice\
         organ piece: 'Little' Fugue in G minor. Using Pure Data, I first created four\
         seperate organ patches and programmed them to play each voice's individual\
@@ -81,13 +83,14 @@ export default class Projects extends React.Component {
         technologiesText: 'Pure Data, Novation LaunchKey 49',
         buttonLink: "https://github.com/mhrice/MUS172Final",
         buttonText: "View On Github",
+        anchorId: "audio",
         key: 4
       },
       {
         color: "orange",
         picture: MIDI,
         headerText: "Arduino Sampler and Effects",
-        subHeaderText: "My Final Project for MUS171",
+        subHeaderText: "Audio Programmer",
         bodyText: "I created an audio tool that would record samples with a\
         microphone and then given the user the ability to play back the samples \
         and add on effects. These effects included distortion, filtering, \
@@ -99,24 +102,47 @@ export default class Projects extends React.Component {
         buttonText: "View On Github",
         key: 5
       },
+
       {
-        color: "white",
-        picture: igm,
-        headerText: "Header",
-        subHeaderText: "Sub",
-        bodyText: "This is a body paragraph.",
-        buttonLink: "www.google.com",
+        color: "#3edcf2",
+        picture: Rooftops,
+        headerText: "Rooftops Album",
+        subHeaderText: "Producer",
+        bodyText: <div>I recorded, mixed, and mastered this album for a friend of
+        mine, Brian Frulla. This was recorded in spring of 2017 at my appartment
+        with the a condenser mic (AT2020), as well as an EIE Pro Audio Interface
+        and a pair of Rockit KRK 8's. The genre is acoustic. For the most of the
+        tracks, there were only two inputs, Brian's guitar and his vocals, except
+        for the last track which featured Chris Mukiibi with extra vocals.
+        Overall it was super fun to produce this album and I'm looking forward to
+        collaborating more with Brian.
+        <div className="soundcloud">
+        <h2> You can also see other music projects on my SoundCloud by clicking
+        this logo:&nbsp; </h2>
+        <iframe
+              allowTransparency="true"
+              scrolling="no"
+              frameBorder="no"
+              src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fmatthew-rice-6&color=orange_white&size=32"
+              style={{width: "32px", height: "32px"}}
+              title="soundcloud">
+        </iframe>
+        </div>
+        </div>,
+        technologiesText: 'Ableton Live, Audio-Technica AT2020, Ozone 7',
+        buttonLink: "https://brianfrulla.bandcamp.com/album/rooftops",
+        buttonText: "View On Bandcamp",
         key: 6
       },
-      {
-        color: "yellow",
-        picture: igm,
-        headerText: "Header",
-        subHeaderText: "Sub",
-        bodyText: "This is a body paragraph.",
-        buttonLink: "www.google.com",
-        key: 7
-      }
+      // {
+      //   color: "yellow",
+      //   picture: igm,
+      //   headerText: "Header",
+      //   subHeaderText: "Sub",
+      //   bodyText: "This is a body paragraph.",
+      //   buttonLink: "www.google.com",
+      //   key: 7
+      // }
 
 
 
@@ -133,6 +159,7 @@ export default class Projects extends React.Component {
         buttonLink={project.buttonLink}
         technologiesText={project.technologiesText}
         buttonText={project.buttonText}
+        anchorId={project.anchorId}
         key={project.key}
         theKey={project.key}
         />

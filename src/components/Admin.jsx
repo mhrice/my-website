@@ -10,27 +10,34 @@ var database = firebase.database();
 export default class Admin extends React.Component {
 constructor(){
   super();
-  this.state = {emails:[], showMessage: false, message: '', name: ''}
+  this.state = {emails:[], showMessage: false, message: '', name: '', signOut: false}
 }
 
   componentDidMount(){
     firebase.auth().onAuthStateChanged(user => {
       if(!user) {
+        if(!this.state.signOut)
         alert("You are not authorized to view this content")
         window.location = '/#/login'; //If User is not logged in, redirect to login page
+        this.setState({signOut: false})
       }
     });
     this.downloadEmails();
   }
 
 logout(){
+  this.setState({
+    signOut: true
+  });
   firebase.auth().signOut().then(function() {
-    console.log("Logout")
+    console.log("Logout");
+      window.location = '/#/login';
+
   // Sign-out successful.
   }).catch(function(error) {
     // An error happened.
     console.log("ERR");
-    console.log(error)
+    console.log(error);
   });
 }
 
