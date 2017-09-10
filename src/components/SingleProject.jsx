@@ -28,7 +28,7 @@ render() {
   var {color, picture, headerText, subHeaderText, bodyText, technologiesText, buttonLink, buttonText, anchorId} = this.props;
   if(!color) color = "none";
   return (
-    <div className="div2" style={{backgroundColor:color}} id={anchorId} >
+    <div className="single-project-container" style={{backgroundColor:color}} id={anchorId} >
     <img src={picture} alt="fake" className="project-img" id={this.state.id}></img>
     <h1 className="project-header">
     {headerText}
@@ -48,9 +48,5 @@ render() {
 
   )
 }
-
-
-
-
 
 }

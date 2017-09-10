@@ -20,7 +20,6 @@ showMenu(){
     menu: !this.state.menu,
     showIcon: !this.state.showIcon
   });
-  // console.log("YOooo")
 
 }
 
@@ -30,7 +29,6 @@ renderMenu(){
   if(this.state.menu) {
     return (
           <MyMenu onClick={()=>{this.showMenu()}} />
-
         )
       }
 }

@@ -10,11 +10,18 @@ const style = {
   marginLeft: 20,
   maxHeight: "1%!important"
 };
+
 export default class AdminLogin extends React.Component {
 
   constructor(){
     super()
     this.state = {email: '', password:'', error:''}
+  }
+
+  handleKeyPress(event){
+    if(event.key === 'Enter'){
+      this.login()
+    }
   }
 
 login(){
@@ -59,7 +66,8 @@ firebase.auth().signInWithEmailAndPassword(email, password).then(()=>{
     <Paper zDepth={0} className="admin-paper-container">
     <TextField hintText="Password" style={style} underlineShow={false} type="password"
     value={this.state.password}
-    onChange={(event: object, newValue: string)=>{this.setState({password: newValue})}}/>
+    onChange={(event: object, newValue: string)=>{this.setState({password: newValue})}}
+    onKeyPress={(e)=>this.handleKeyPress(e)} />
     <Divider />
     </Paper>
     <RaisedButton label="Submit!" className ="admin-submit-button" onClick={()=>{this.login()} } />

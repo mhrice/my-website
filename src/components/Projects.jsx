@@ -1,7 +1,7 @@
 import React from 'react';
 import SingleProject from './SingleProject';
-// import igm from '../resources/test.jpg';
 
+//Images for projects
 import RFID from '../resources/rfid.png';
 import TODO from '../resources/todo-app.png';
 import Tower from '../resources/tower.png';
@@ -144,8 +144,6 @@ export default class Projects extends React.Component {
       //   key: 7
       // }
 
-
-
     ]
 
     const listItems = projects.map((project)=>{
@@ -169,7 +167,6 @@ export default class Projects extends React.Component {
   }
 
 
-//color, picture, headerText, subHeaderText, bodyText, buttonLink
   render() {
     return (
       <div className="projects-container">

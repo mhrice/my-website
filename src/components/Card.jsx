@@ -39,16 +39,11 @@ export default class MyCard extends React.Component {
         avatar={Logo}
         actAsExpander={true}
         showExpandableButton={true}
-
          />
         <CardTitle title={cardTitle} subtitle={cardSubtitle} expandable={true}  />
         <CardText expandable={true}>
         {cardText}
         </CardText>
-         {/*<CardTitle title={secondCardTitle} expandable={true} />
-        <CardText expandable={true}>
-        {secondCardText}
-        </CardText> */}
       </Card>
       )
     }
@@ -57,7 +52,6 @@ export default class MyCard extends React.Component {
       transitionName="example"
       transitionEnterTimeout={700}
       transitionLeaveTimeout={300}
-
       >
                 {child}
       </ReactCSSTransitionGroup>

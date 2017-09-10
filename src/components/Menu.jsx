@@ -3,7 +3,6 @@ import Paper from 'material-ui/Paper';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import ReactSVG from 'react-svg';
-
 import RightIcon from '../resources/right-icon.svg';
 import LeftIcon from '../resources/left-icon.svg';
 
@@ -14,9 +13,9 @@ const style = {
   top: '0%'
 
 };
+
 let svg = <ReactSVG
   path={RightIcon}
-
 />
 
 let otherSvg = <ReactSVG
@@ -25,13 +24,10 @@ let otherSvg = <ReactSVG
 
 export default class MyMenu extends React.Component {
 
-
 handleClick(loc){
   window.location.href = `#/${loc}`;
   this.props.onClick();
 }
-
-
 
   render() {
     return (
@@ -49,10 +45,6 @@ handleClick(loc){
   </div>
 
     )
-
-
   }
-
-
 
 }
