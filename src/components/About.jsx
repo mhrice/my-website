@@ -80,8 +80,8 @@ export default class About extends React.Component {
           About
         </h1>
         <p className="about-text">
-          I was born in
-          <a href="https://goo.gl/maps/kc6rTfHVVdM2" className="home-link">Rockville, Maryland</a>, but moved to
+          I was born in&nbsp;
+          <a href="https://goo.gl/maps/kc6rTfHVVdM2" className="home-link">Rockville, Maryland</a>, but moved to&nbsp;
           <a href="https://goo.gl/maps/65rMTJTQyoL2" className="home-link">Los Angeles</a>
           when I was 9. I grew up learning to love electronic music and technology
           and became passionate about electronic music production and audio signal processing.
