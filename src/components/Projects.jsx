@@ -19,14 +19,14 @@ export default class Projects extends React.Component {
         picture: RFID,
         headerText: "Birch Aquarium RFID Pathways",
         subHeaderText: "Product Designer",
-        bodyText: "Worked with a team to develop an RFID-based\
+        bodyText: `Worked with a team to develop an RFID-based\
         personalized system that would showcase the potential of RFID technology.\
         The goal was for users to have an RFID ticket that they could register to\
         a specific 'professional pathway'. Each pathway would be a specific role\
         on a science team that the user would take on and as they traveled around\
         the Aquarium they were able to scan their card and see additional content\
         based on their pathway. We also created an update system that allows for\
-        simple, picture-based updates to the content.",
+        simple, picture-based updates to the content.`,
         technologiesText: 'Raspberry Pi, HTML/CSS, Vanilla Javascript, JQuery, Firebase',
         buttonLink: "https://github.com/mhrice/RFID-pathways-public",
         buttonText: "View On Github",
@@ -37,12 +37,12 @@ export default class Projects extends React.Component {
         picture: TODO,
         headerText: "My Todo App",
         subHeaderText: "Web Developer",
-        bodyText: "Based on Andrew Mead's 'Complete React Web App Developer Course'\
+        bodyText: `Based on Andrew Mead's 'Complete React Web App Developer Course'\
         on Udemy, this app lets a user login using Github, and make a todo list.\
         Users can then search todos, check off todos, and delete todos. The list\
         will show a timestamp when actions are performed. Skills learned from this\
         course heavily influenced the development of this website (which is also\
-        written in React).",
+        written in React).`,
         technologiesText: 'React, Redux, Firebase, Heroku',
         buttonLink: "https://github.com/mhrice/React-todo",
         buttonText: "View On Github",
@@ -54,13 +54,13 @@ export default class Projects extends React.Component {
         picture: Tower,
         headerText: "Tower",
         subHeaderText: "Full-Stack Engineer",
-        bodyText: "Tower is a texting campaign platform from startup company\
+        bodyText: `Tower is a texting campaign platform from startup company\
         Alchemy. I worked on both front-end and back-end to customize the UI and\
         the functionality of the texting system. This project is currently in\
         development as we are adding voicemail-drop functionality and email/push\
-        notifications.",
-        technologiesText: 'Ionic Framework, Firebase, Plivo, Firebase-Functions\
-        (as backend microservices)',
+        notifications.`,
+        technologiesText: `Ionic Framework, Firebase, Plivo, Firebase-Functions\
+        (as backend microservices)`,
         buttonLink: "https://gitlab.ixir.io/Tower/client-app/",
         buttonText: "View On Github",
         key: 3
@@ -70,7 +70,7 @@ export default class Projects extends React.Component {
         picture: BachJam,
         headerText: "Bach Little Fugue in Gm Jam",
         subHeaderText: "Audio Programmer",
-        bodyText: "This was a fun electronic performace based on Bach's four-voice\
+        bodyText: `This was a fun electronic performace based on Bach's four-voice\
         organ piece: 'Little' Fugue in G minor. Using Pure Data, I first created four\
         seperate organ patches and programmed them to play each voice's individual\
         MIDI data. I then created my own synth to 'jam' on top of the original voices.\
@@ -79,7 +79,7 @@ export default class Projects extends React.Component {
         each measure. I also produced audio effects to layer at various points\
         including filtering, tremolo, and flanger as well as an eq. Finally, I\
         mapped all of the controls to my Novation LaunchKey 49 and performed my\
-        jam with an annotated score.",
+        jam with an annotated score.`,
         technologiesText: 'Pure Data, Novation LaunchKey 49',
         buttonLink: "https://github.com/mhrice/MUS172Final",
         buttonText: "View On Github",
@@ -91,12 +91,12 @@ export default class Projects extends React.Component {
         picture: MIDI,
         headerText: "Arduino Sampler and Effects",
         subHeaderText: "Audio Programmer",
-        bodyText: "I created an audio tool that would record samples with a\
+        bodyText: `I created an audio tool that would record samples with a\
         microphone and then given the user the ability to play back the samples \
         and add on effects. These effects included distortion, filtering, \
         bitcrushing, and tempo changes. The user was provided with haptic and \
         visual feedback using buttons and LEDs as well as a potentiometer and a \
-        multi-colored LED for individual parameter control.",
+        multi-colored LED for individual parameter control.`,
         technologiesText: 'Arduino, Pure Data',
         buttonLink: "https://github.com/mhrice/MUS172Final",
         buttonText: "View On Github",
