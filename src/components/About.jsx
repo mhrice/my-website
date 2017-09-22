@@ -43,9 +43,9 @@ export default class About extends React.Component {
         cardText: <ul>
           <li id="education-list-text">Web App Development</li>
           <li id="education-list-text">Data Science/Machine Learning</li>
-          <li id="education-list-text">Music Production (click
+          <li id="education-list-text">Music Production (click&nbsp;
             <a href="https://www.soundcloud.com/matthew-rice-6"
-            className="soundcloud-link">here</a>
+            className="soundcloud-link">here&nbsp;</a>
             for a link to my SoundCloud)
           </li>
           <li id="education-list-text">Classical Piano</li>
@@ -82,7 +82,7 @@ export default class About extends React.Component {
         <p className="about-text">
           I was born in&nbsp;
           <a href="https://goo.gl/maps/kc6rTfHVVdM2" className="home-link">Rockville, Maryland</a>, but moved to&nbsp;
-          <a href="https://goo.gl/maps/65rMTJTQyoL2" className="home-link">Los Angeles</a>
+          <a href="https://goo.gl/maps/65rMTJTQyoL2" className="home-link">Los Angeles&nbsp;</a>
           when I was 9. I grew up learning to love electronic music and technology
           and became passionate about electronic music production and audio signal processing.
           I also enjoy web development and embeded systems.
