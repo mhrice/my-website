@@ -1,6 +1,7 @@
 import React from 'react';
 import SingleProject from './SingleProject';
 
+
 //Images for projects
 import RFID from '../resources/rfid.png';
 import TODO from '../resources/todo-app.png';
@@ -8,6 +9,7 @@ import Tower from '../resources/tower.png';
 import MIDI from '../resources/midi-controller.png';
 import BachJam from '../resources/back-jam.png';
 import Rooftops from '../resources/rooftops.jpg';
+import Spectrogram from '../resources/spectrogram.png';
 
 export default class Projects extends React.Component {
   //color, picture, headerText, subHeaderText, bodyText, buttonLink
@@ -16,6 +18,25 @@ export default class Projects extends React.Component {
     let projects = [
       {
         color: "",
+        picture: Spectrogram,
+        headerText: "Spectrogram",
+        subHeaderText: "Web Developer",
+        bodyText: <div>Designed an adjustable spectrogram using JavaScript’s Web Audio API.
+        It is based on a previous project by Boris Smus
+        (Click <a className="home-link" href="https://github.com/borismus/spectrogram">here</a> for his project).
+        The project has a ton of controls, including changing the limits of the graph. You can also draw on it with your mouse or finger,
+        creating a sine wave at the touched frequency. Furthermore, there are options to
+        change the timbre of the sound as well as snap the drawn frequencies to a specific scale.
+        You can view a demo of the project&nbsp;
+        <a className="home-link" href="http://listeningtowaves.github.io/Spectrogram/">here</a>.
+        I'm also currently working on a Web Audio-based oscilloscope.</div>,
+        technologiesText: "Web Audio API, HTML/CSS, Vanilla Javascript, Music Theory",
+        buttonLink: "https://github.com/ListeningToWaves/Spectrogram",
+        buttonText: "View On Github",
+        key: 1
+      },
+      {
+        color: "#f2f271",
         picture: RFID,
         headerText: "Birch Aquarium RFID Pathways",
         subHeaderText: "Product Designer",
@@ -28,9 +49,9 @@ export default class Projects extends React.Component {
         based on their pathway. We also created an update system that allows for\
         simple, picture-based updates to the content.`,
         technologiesText: 'Raspberry Pi, HTML/CSS, Vanilla Javascript, JQuery, Firebase',
-        buttonLink: "https://github.com/mhrice/RFID-pathways-public",
+        buttonLink: "https://github.com/jguidry/SEE_2017_RFID_Pathways",
         buttonText: "View On Github",
-        key: 1
+        key: 2
       },
       {
         color: "green",
@@ -47,7 +68,7 @@ export default class Projects extends React.Component {
         buttonLink: "https://github.com/mhrice/React-todo",
         buttonText: "View On Github",
         anchorId: "web-dev",
-        key: 2
+        key: 3
       },
       {
         color: "red",
@@ -63,7 +84,7 @@ export default class Projects extends React.Component {
         (as backend microservices)`,
         buttonLink: "https://gitlab.ixir.io/Tower/client-app/",
         buttonText: "View On Github",
-        key: 3
+        key: 4
       },
       {
         color: "purple",
@@ -84,7 +105,7 @@ export default class Projects extends React.Component {
         buttonLink: "https://github.com/mhrice/MUS172Final",
         buttonText: "View On Github",
         anchorId: "audio",
-        key: 4
+        key: 5
       },
       {
         color: "orange",
@@ -100,7 +121,7 @@ export default class Projects extends React.Component {
         technologiesText: 'Arduino, Pure Data',
         buttonLink: "https://github.com/mhrice/MUS172Final",
         buttonText: "View On Github",
-        key: 5
+        key: 6
       },
 
       {
@@ -132,7 +153,7 @@ export default class Projects extends React.Component {
         technologiesText: 'Ableton Live, Audio-Technica AT2020, Ozone 7',
         buttonLink: "https://brianfrulla.bandcamp.com/album/rooftops",
         buttonText: "View On Bandcamp",
-        key: 6
+        key: 7
       },
       // {
       //   color: "yellow",
