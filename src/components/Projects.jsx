@@ -33,6 +33,7 @@ export default class Projects extends React.Component {
         technologiesText: "Web Audio API, HTML/CSS, Vanilla Javascript, Music Theory",
         buttonLink: "https://github.com/ListeningToWaves/Spectrogram",
         buttonText: "View On Github",
+        anchorId: "web-dev",
         key: 1
       },
       {
@@ -67,7 +68,6 @@ export default class Projects extends React.Component {
         technologiesText: 'React, Redux, Firebase, Heroku',
         buttonLink: "https://github.com/mhrice/React-todo",
         buttonText: "View On Github",
-        anchorId: "web-dev",
         key: 3
       },
       {
@@ -121,7 +121,8 @@ export default class Projects extends React.Component {
         technologiesText: 'Arduino, Pure Data',
         buttonLink: "https://github.com/mhrice/MUS172Final",
         buttonText: "View On Github",
-        key: 6
+        key: 6,
+        anchorId: 'embedded'
       },
 
       {
