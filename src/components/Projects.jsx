@@ -1,7 +1,6 @@
 import React from 'react';
 import SingleProject from './SingleProject';
 
-
 //Images for projects
 import RFID from '../resources/rfid.png';
 import TODO from '../resources/todo-app.png';
@@ -193,7 +192,7 @@ export default class Projects extends React.Component {
     return (
       <div className="projects-container">
       <h1>Projects</h1>
-      {this.renderProjects()}
+      {/*{this.renderProjects()}*/}
 
       </div>
     )

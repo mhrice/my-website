@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="./js/Tone.min.js"></script>
+  <script src="./js/NexusUI.js"></script>
+</head>
+
+<style>
+  #power {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+  }
+
+  #oscilloscope {
+    height: 200px;
+    width: 400px;
+    left: 0%;
+    top: 10%;
+    position: absolute;
+  }
+
+  #spectrogram {
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    left: 0%;
+    top: 50%;
+  }
+
+  #control {
+    height: 275px;
+    width: 275px;
+    right: 40%;
+    top: 10%;
+    position: absolute;
+  }
+
+  #delay {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+  }
+
+  #reverb {
+    position: absolute;
+    left: 38%;
+    top: 65%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+  }
+
+  #play {
+    position: absolute;
+    right: 5%;
+    top: 62%;
+  }
+</style>
+
+<body>
+  <div id="oscilloscope">Oscilloscope</div>
+  <div id="spectrogram">Spectrogram</div>
+  <div id="control">Control</div>
+  <div id="power">Power</div>
+  <div id="reverb">Reverb</div>
+  <div id="delay">Delay</div>
+  <div id="play"></div>
+
+
+<script>
+  // Link Tone to Nexus UI
+  Nexus.context = Tone.context;
+
+  var power = new Nexus.Toggle("#power");
+  power.colorize("accent", "red");
+  var control = new Nexus.Position("#control", {"minX": -20, "maxX": 0, "minY": 100,"maxY": 1000});
+  var reverbDial = new Nexus.Dial("#reverb");
+  var delayDial = new Nexus.Dial("#delay");
+  var textButton = new Nexus.TextButton("#play");
+
+  // MonoSynth(), PluckSynth(), FMSynth(), AMSynth()
+  var synth = new Tone.MonoSynth();
+  var volume = new Tone.Volume(-Infinity);
+  // Only for MonoSynth
+  // "sine", "sqaure", "sawtooth", "triangle"
+  synth.oscillator.type = "sawtooth";
+
+
+  var oscilloscope = new Nexus.Oscilloscope("#oscilloscope");
+  var spectrogram = new Nexus.Spectrogram("#spectrogram");
+
+  // Main On/Off Switch
+  var powerVal = false;
+  power.on("change", function(v) {
+    if (powerVal) {
+      volume.volume.value = -Infinity;
+      power.colorize("accent", "red")
+      powerVal = false;
+
+    } else {
+      volume.volume.value = control.x;
+      power.colorize("accent", "green");
+      powerVal = true;
+    }
+  });
+
+  // Pitch/Frequency Control
+  control.on("change", (v) => {
+    if (powerVal) {
+      volume.volume.value = v.x;
+      synth.triggerAttack(v.y);
+    }
+  });
+
+  // Reverb
+  var reverb = new Tone.Freeverb().toMaster();
+  reverb.wet.value = 0;
+
+  reverbDial.on("change", function(v) {
+    reverb.wet.value = v;
+  });
+
+  // Delay
+  var delay = new Tone.FeedbackDelay("8n", 0.75).toMaster();
+  delay.wet.value = 0;
+  delayDial.on("change", function(v) {
+    delay.wet.value = v;
+  });
+
+  // Start Sequence
+  // Create a repeating pulse
+  // Change notes on each beat
+  var sequence = new Nexus.Sequence([0, 2, 4, 6, 4, 2, 0]);
+  var beat = new Nexus.Interval(100, function changeNotes(e) {
+    var note = Nexus.note(sequence.next());
+    synth.triggerAttackRelease(note, 100);
+  });
+
+  // Text Button Toggle
+  var start = false;
+  textButton.mode = "toggle";
+  textButton.on("change", function(v) {
+    if (start) {
+      start = false;
+      beat.stop();
+      textButton.text = "Play";
+    } else {
+      start = true;
+      beat.start();
+      textButton.text = "Stop";
+    }
+  });
+
+  // Connect everything together
+  synth.chain(volume, reverb, delay, Tone.Master);
+  oscilloscope.connect(volume);
+  spectrogram.connect(volume);
+</script>
+
+</body>
+</html>

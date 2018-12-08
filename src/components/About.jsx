@@ -20,12 +20,13 @@ export default class About extends React.Component {
         cardSubtitle: "B.S. Electrical Engineering Class of 2019, Minor in Music",
         cardText: <div id="education-list">Course Work Includes:
           <ul>
-            <li id="education-list-text">Signal Processing</li>
-            <li id="education-list-text">Analog Design</li>
-            <li id="education-list-text">Data Structures</li>
-            <li id="education-list-text">Acoustics</li>
+          <li id="education-list-text">Acoustics</li>
+          <li id="education-list-text">Analog/Digital Design</li>
+          <li id="education-list-text">Algorithms</li>
+          <li id="education-list-text">Data Structures</li>
+            <li id="education-list-text">Digital Signal Processing</li>
+            <li id="education-list-text">Computer Music</li>
             <li id="education-list-text">Music Programming</li>
-            <li id="education-list-text">Embeded Systems</li>
           </ul>
         </div>,
         key: 1
