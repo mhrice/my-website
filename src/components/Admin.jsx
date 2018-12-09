@@ -19,7 +19,7 @@ export default class Admin extends React.Component {
     firebase.auth().onAuthStateChanged(user => {
       if (!user) {
           alert("You are not authorized to view this content")
-        window.location = '/#/login'; //If User is not logged in, redirect to login page
+        window.location = '/login'; //If User is not logged in, redirect to login page
       }
     });
     this.downloadEmails();
@@ -29,7 +29,7 @@ export default class Admin extends React.Component {
     this.setState({signOut: true});
     firebase.auth().signOut().then(function() {
       console.log("Logout");
-      window.location = '/#/login';
+      window.location = '/login';
 
       // Sign-out successful.
     }).catch(function(error) {

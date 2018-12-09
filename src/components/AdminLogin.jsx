@@ -32,7 +32,7 @@ firebase.auth().signInWithEmailAndPassword(email, password).then(()=>{
   that.setState({
     error: ""
   });
-  window.location.href="/#/admin"
+  window.location.href="/admin"
 
 }).catch((error)=>{
   console.log(email);

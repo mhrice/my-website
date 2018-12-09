@@ -25,7 +25,7 @@ let otherSvg = <ReactSVG
 export default class MyMenu extends React.Component {
 
 handleClick(loc){
-  window.location.href = `#/${loc}`;
+  window.location.href = `/${loc}`;
   this.props.onClick();
 }
 

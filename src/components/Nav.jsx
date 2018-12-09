@@ -4,7 +4,6 @@ import MyLogo from '../resources/my-logo.png';
 import Avatar from 'material-ui/Avatar';
 import AppBar from 'material-ui/AppBar';
 
-
 import MyMenu from './Menu';
 
 var MediaQuery = require('react-responsive');

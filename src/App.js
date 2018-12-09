@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // import './styles/styles.scss';
 // import './styles/styles.scss';
@@ -21,14 +21,30 @@ import Admin from './components/Admin';
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
-injectTapEventPlugin();
+// injectTapEventPlugin();
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      height: window.innerHeight,
+      width: window.innerWidth
+    }
+  }
+  componentDidMount(){
+    window.addEventListener("resize", this.resize);
+    // loadPictures
+  }
+
+  resize = ()=>{
+    this.setState({height: window.innerHeight,width: window.innerWidth});
+
+  }
 
   render() {
     return (
       <MuiThemeProvider>
-      <HashRouter>
+      <BrowserRouter>
       <div className="App">
 
         <link rel="stylesheet"
@@ -39,7 +55,7 @@ class App extends Component {
 
         <Switch>
           <Route path="/about" component={About}/>
-          <Route path="/projects" component={Projects}/>
+          <Route path="/projects" render={(props) => <Projects {...props} height={this.state.height} width={this.state.width} />}/>
           <Route path="/contact" component={Contact}/>
           <Route exact path = "/login" component={AdminLogin} />
           <Route exact path = "/admin" component={Admin} />
@@ -47,7 +63,7 @@ class App extends Component {
           </Switch>
 
       </div>
-      </HashRouter>
+      </BrowserRouter>
     </MuiThemeProvider>
     );
   }

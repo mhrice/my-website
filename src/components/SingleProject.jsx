@@ -25,23 +25,23 @@ componentDidMount(){
 }
 
 render() {
-  var {color, picture, headerText, subHeaderText, bodyText, technologiesText, buttonLink, buttonText, anchorId} = this.props;
-  if(!color) color = "none";
+  var {picture, headerText, subHeaderText, bodyText, technologiesText, buttonLink, buttonText, anchorId} = this.props;
+  let color = "none";
   return (
-    <div className="single-project-container" style={{backgroundColor:color}} id={anchorId} >
+    <div className="single-project-container" id={anchorId} >
     <img src={picture} alt="fake" className="project-img" id={this.state.id}></img>
-    <h1 className="project-header">
+    <div className="project-header">
     {headerText}
-    </h1>
-    <h3 className="project-subheader">
+    </div>
+    <div className="project-subheader">
     {subHeaderText}
-    </h3>
-    <div className="project-discription">
+    </div>
+    <div className="project-description">
     {bodyText}
     </div>
-    <h3 className="project-technologies">
+    <div className="project-technologies">
     Tools: {technologiesText}
-    </h3>
+    </div>
     <RaisedButton label={buttonText} style={{marginBottom: "2%"}} onClick={()=>{this.handleClick(buttonLink)} } />
 
     </div>
