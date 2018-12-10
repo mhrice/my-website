@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfPic from "../resources/facebook_prof_pic.png";
 import {Link } from 'react-router-dom';
 
 import finishedFile from '../resources/IntroToAudioDSPWebFinished';
@@ -24,7 +25,8 @@ downloadFile(fileName){
   render() {
     return (
       <div className = "home-container">
-
+      {/* PRE-LOAD PICTURE*/}
+      <img src={ProfPic} style={{display: "none"}}/>
       <div>
       <h1 className = "home-title-text">
       Matthew Rice

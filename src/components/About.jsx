@@ -6,7 +6,7 @@ import SkillsLogo from "../resources/employee.svg";
 import EducationLogo from "../resources/books.svg";
 import InterestsLogo from "../resources/heart.svg";
 import SkillsPic from "../resources/sup.svg";
-import ProfPic from "../resources/facebook_prof_pic.jpg";
+import ProfPic from "../resources/facebook_prof_pic.png";
 import {Card, CardHeader, CardTitle, CardText} from 'material-ui/Card';
 
 export default class About extends React.Component {
