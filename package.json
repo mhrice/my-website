@@ -1,6 +1,6 @@
 {
   "name": "my-website",
-  "homepage": "http://matthewrice.me/",
+  "homepage": "https://mhrice.github.io/my-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
