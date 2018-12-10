@@ -6,6 +6,8 @@ import SkillsLogo from "../resources/employee.svg";
 import EducationLogo from "../resources/books.svg";
 import InterestsLogo from "../resources/heart.svg";
 import SkillsPic from "../resources/sup.svg";
+import ProfPic from "../resources/facebook_prof_pic.jpg";
+import {Card, CardHeader, CardTitle, CardText} from 'material-ui/Card';
 
 export default class About extends React.Component {
 
@@ -24,10 +26,11 @@ export default class About extends React.Component {
           <li id="education-list-text">Acoustics</li>
           <li id="education-list-text">Analog/Digital Design</li>
           <li id="education-list-text">Algorithms</li>
+          <li id="education-list-text">Computer Music</li>
           <li id="education-list-text">Data Structures</li>
-            <li id="education-list-text">Digital Signal Processing</li>
-            <li id="education-list-text">Computer Music</li>
-            <li id="education-list-text">Music Programming</li>
+          <li id="education-list-text">Digital Signal Processing</li>
+          <li id="education-list-text">Music Programming</li>
+          <li id="education-list-text">Recording</li>
           </ul>
         </div>,
         key: 1
@@ -76,13 +79,24 @@ export default class About extends React.Component {
   render() {
     return (
       <div className="about-container">
-        <h1 className="about-header">
-          About
-        </h1>
-        <p className="about-text">
-          I'm a current undergraduate at UC San Diego. Check out my background below
-          or click on the projects tab to see my skills in action.
-        </p>
+      <div className="about-description-container">
+        <img src={ProfPic} className="profile-image"/>
+        <Card className="about-text-container">
+          <CardText className="about-text">
+          <div className="about-greeting-container"><div className="about-greeting">Hello!</div></div>
+          <div className="about-name">I'm Matthew Rice</div>
+            I'm a current undergraduate at UC San Diego
+            where I am working on a B.S. in Electrical Engineering with a minor in music.
+            Originally from beautiful Manhattan Beach, California, I have developed
+            passions in music, math, and computer science. I'm an experienced front-of-house
+            engineer having worked over 200 concerts with artists such as Nate Smith, FLETCHER, and JMSN.
+            I also a proficient programmer having worked on many software projects
+            as part of my coursework and for industry. I have extensive course work in signal processing,
+            and focus on applying DSP algorithms to music. Check out my background below
+            or click on the projects tab to see my skills in action.
+            </CardText>
+          </Card>
+        </div>
 
         {this.renderCards()}
 

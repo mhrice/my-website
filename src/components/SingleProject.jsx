@@ -28,7 +28,7 @@ render() {
   var {picture, headerText, subHeaderText, bodyText, technologiesText, buttonLink, buttonText, anchorId} = this.props;
   let color = "none";
   return (
-    <div className="single-project-container" id={anchorId} >
+    <div className="single-project-container" id={anchorId} tabIndex={-1}>
     <img src={picture} alt="fake" className="project-img" id={this.state.id}></img>
     <div className="project-header">
     {headerText}

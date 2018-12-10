@@ -99,7 +99,7 @@ class Skills extends React.Component {
           <div className="skill-category">Engineering</div>
           {Object.keys(EngineeringSkills).map((skill)=>{
             return (
-              <div>
+              <React.Fragment key={skill}>
               <div>{skill}</div>
                 <LinearProgress
                 value = {EngineeringSkills[skill]}
@@ -108,9 +108,8 @@ class Skills extends React.Component {
                   root: classes.root1,
                   barColorPrimary: classes.barColorPrimary1
                 }}
-                key={skill}
                 />
-              </div>
+              </React.Fragment>
             )
           })}
         </div>
@@ -118,7 +117,7 @@ class Skills extends React.Component {
           <div className="skill-category">Artistry</div>
           {Object.keys(ArtistrySkills).map((skill)=>{
             return (
-              <div>
+              <React.Fragment key={skill}>
               <div>{skill}</div>
                 <LinearProgress
                 value = {ArtistrySkills[skill]}
@@ -127,9 +126,8 @@ class Skills extends React.Component {
                   root: classes.root2,
                   barColorPrimary: classes.barColorPrimary2
                 }}
-                key={skill}
                 />
-              </div>
+              </React.Fragment>
             )
           })}
           </div>
