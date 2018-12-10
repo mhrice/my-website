@@ -44,7 +44,7 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
 
         <link rel="stylesheet"
