@@ -81,7 +81,7 @@ export default class About extends React.Component {
         </h1>
         <p className="about-text">
           I'm a current undergraduate at UC San Diego. Check out my background below
-          or click on the projects tab to see my skills in action. Yeah!
+          or click on the projects tab to see my skills in action.
         </p>
 
         {this.renderCards()}

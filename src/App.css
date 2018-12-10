@@ -139,16 +139,30 @@ p, h1, h2, h3, h4, h5, div {
 }
 
 .home-link {
-  text-decoration: none;
-  color: blue;
-  margin-bottom: 10%;
+  color: white;
+  height: 100%;
+  padding: 2px 8px;
+  display: flex;
+  flex-direction: column;
+}
+.link1 {
+  background-color: #E51C00;
+
+}
+.link2 {
+  background-color: #10C8B8;
+
+}
+.link3 {
+  background-color: #4472C4;
+
 }
 
-.home-link:hover {
+/* .home-link:hover {
   text-decoration: none;
   color: white;
   cursor: pointer;
-}
+} */
 
 .home-paragraph {
   display: flex;

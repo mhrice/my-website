@@ -35,9 +35,9 @@ downloadFile(fileName){
        {/*<a className="home-link" onClick={()=>this.downloadFile("Finished")}>Intro To Audio DSP Finished</a>*/}
        {/*}<a className="home-link" onClick={()=>this.downloadFile("APCSP")}> APCSP Files </a> */}
       <p className = "home-paragraph"> I specialize in&nbsp;
-      <Link className="home-link" to={"/projects#audio"}>audio technology</Link>, and&nbsp;
-      <Link className="home-link" to={"/projects#web-dev"} >web development</Link>,&nbsp;
-      <Link className="home-link" to={"/projects#embedded"}>embedded systems</Link>
+      <div className="home-link link1" >audio technology</div>, &nbsp;
+      <div className="home-link link2" >web development</div>,and&nbsp;
+      <div className="home-link link3" >embedded systems</div>
        </p>
       </div>
 
