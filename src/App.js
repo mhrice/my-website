@@ -57,6 +57,7 @@ class App extends Component {
           <Route path="/about" component={About}/>
           <Route path="/projects" render={(props) => <Projects {...props} height={this.state.height} width={this.state.width} />}/>
           <Route path="/contact" component={Contact}/>
+          {/*<Route exact path="/home" component={Home}/>*/}
           <Route exact path = "/login" component={AdminLogin} />
           <Route exact path = "/admin" component={Admin} />
           <Route path="/*" component={Home} />
