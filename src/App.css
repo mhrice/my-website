@@ -89,7 +89,9 @@ p, h1, h2, h3, h4, h5, div {
   opacity: 1;
   margin-bottom: -40%;
 }
-
+.menu-dropdown {
+  z-index: 12;
+}
 .menu-text {
   flex: 1;
   text-decoration: none;

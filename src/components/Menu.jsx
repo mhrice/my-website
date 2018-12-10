@@ -5,6 +5,7 @@ import MenuItem from 'material-ui/MenuItem';
 import ReactSVG from 'react-svg';
 import RightIcon from '../resources/right-icon.svg';
 import LeftIcon from '../resources/left-icon.svg';
+import {Link} from 'react-router-dom';
 
 const style = {
   display: 'inline-block',
@@ -24,21 +25,18 @@ let otherSvg = <ReactSVG
 
 export default class MyMenu extends React.Component {
 
-handleClick(loc){
-  window.location.href = `/${loc}`;
-  this.props.onClick();
-}
+
 
   render() {
     return (
       <div>
     <Paper style={style} className="menu-dropdown">
       <Menu>
-        <MenuItem primaryText="Menu" className="app-bar-title" onClick={()=>{this.handleClick("home")}} leftIcon={otherSvg}></MenuItem>
-        <MenuItem primaryText="Home" className="app-bar-item" onClick={()=>{this.handleClick("home")}} rightIcon={svg} />
-        <MenuItem primaryText="About" className="app-bar-item" onClick={()=>{this.handleClick("about")}} rightIcon={svg}/>
-        <MenuItem primaryText="Projects" className="app-bar-item" onClick={()=>{this.handleClick("projects")}} rightIcon={svg} />
-        <MenuItem primaryText="Contact" className="app-bar-item" onClick={()=>{this.handleClick("contact")}} rightIcon={svg}/>
+        <MenuItem primaryText="Menu" className="app-bar-title" leftIcon={otherSvg}></MenuItem>
+        <Link to="/" className="menu-text"><MenuItem primaryText="Home" className="app-bar-item"rightIcon={svg} onClick={this.props.onClick}></MenuItem></Link>
+        <Link to="/about" className="menu-text"><MenuItem primaryText="About" className="app-bar-item" onClick={this.props.onClick} rightIcon={svg}/></Link>
+        <Link to="/projects" className="menu-text"><MenuItem primaryText="Projects" className="app-bar-item" onClick={this.props.onClick} rightIcon={svg} /></Link>
+        <Link to="/contact" className="menu-text"><MenuItem primaryText="Contact" className="app-bar-item" onClick={this.props.onClick} rightIcon={svg}/></Link>
       </Menu>
     </Paper>
 
