@@ -160,6 +160,19 @@ p, h1, h2, h3, h4, h5, div {
 
 }
 
+.projects-link {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid blue;
+
+}
+
+.projects-link:hover {
+  /* text-decoration: none; */
+  cursor: pointer;
+  color: blue;
+}
+
 /* .home-link:hover {
   text-decoration: none;
   color: white;
@@ -306,9 +319,9 @@ p, h1, h2, h3, h4, h5, div {
 
 }
 
-#projects-first-div {
+/* #projects-first-div {
   margin-top: 0%!important;
-}
+} */
 
 .project-header {
   margin-top: 0.5%;

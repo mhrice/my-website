@@ -22,12 +22,12 @@ let projects = [
     subHeaderText: "Web Developer",
     bodyText: <div>Designed an adjustable spectrogram using JavaScript’s Web Audio API.
     It is based on a previous project by Boris Smus
-    (Click <a className="home-link" href="https://github.com/borismus/spectrogram">here</a> for his project).
+    (Click <a className="projects-link" href="https://github.com/borismus/spectrogram">here</a> for his project).
     The project has a ton of controls, including changing the limits of the graph. You can also draw on it with your mouse or finger,
     creating a sine wave at the touched frequency. Furthermore, there are options to
     change the timbre of the sound as well as snap the drawn frequencies to a specific scale.
     You can view a demo of the project&nbsp;
-    <a className="home-link" href="http://listeningtowaves.github.io/Spectrogram/">here</a>.
+    <a className="projects-link" href="http://listeningtowaves.github.io/Spectrogram/">here</a>.
     I'm also currently working on a Web Audio-based oscilloscope.</div>,
     technologiesText: "Web Audio API, HTML/CSS, Vanilla Javascript, Music Theory",
     buttonLink: "https://github.com/ListeningToWaves/Spectrogram",
