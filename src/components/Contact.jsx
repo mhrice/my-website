@@ -76,7 +76,7 @@ handleRequestClose(){
         Contact Me
       </h1>
       <p className="contact-paragraph"> Fill out this form, or simply&nbsp;
-      <a href="mailto:matthewrice11@yahoo.com" target="_top" className="home-link">email</a> me </p>
+      <a href="mailto:matthewrice11@yahoo.com" target="_top" className="contact-link">email</a> me </p>
       <Paper zDepth={2} className="contact-form-container">
     <TextField style={style} underlineShow={false} floatingLabelText="First Name"
     value={this.state.firstName}

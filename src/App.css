@@ -414,6 +414,17 @@ p, h1, h2, h3, h4, h5, div {
 .contact-submit-button {
   margin-top: -3%;
 }
+.contact-link {
+    text-decoration: none;
+    border-bottom: 1px solid blue;
+    color: black;
+
+}
+
+.contact-link:hover {
+  cursor: pointer;
+  color: blue;
+}
 
 
 /* Admin Login and Dash Pages */
