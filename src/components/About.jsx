@@ -1,5 +1,6 @@
 import React from 'react';
 import MyCard from './Card';
+import Skills from './Skills';
 import UCSDLogo from "../resources/UCSD-logo.png";
 import SkillsLogo from "../resources/employee.svg";
 import EducationLogo from "../resources/books.svg";
@@ -33,9 +34,7 @@ export default class About extends React.Component {
       }, {
         Title: "Skills",
         Logo: SkillsLogo,
-        cardTitle: <div className="skills-div">
-          My Skills Graph</div>,
-        cardText: <img src={SkillsPic} className="skills-pic" alt="My Skills"/>,
+        cardText: <Skills />,
         key: 2
       }, {
         Title: "Interests",

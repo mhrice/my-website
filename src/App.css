@@ -46,6 +46,9 @@ p, h1, h2, h3, h4, h5, div {
   .project-technologies {
     font-size: 14px!important;
   }
+  .single-project-container {
+    width: 100%!important;
+  }
 }
 
 
@@ -99,6 +102,11 @@ p, h1, h2, h3, h4, h5, div {
 .menu-text:visited {
   text-decoration: none;
   color: black;
+}
+.menu-under:hover {
+  /* border-bottom: 2px solid #D31717; */
+  /* background-color: grey; */
+  color: white;
 }
 
 
@@ -202,7 +210,19 @@ p, h1, h2, h3, h4, h5, div {
   display: flex;
   justify-content: center;
 }
-
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+}
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 2%;
+}
+.skill-category {
+  font-size: 1.5rem;
+}
 .skills-pic {
   width: 100%;
   max-height: 90vh;
@@ -251,12 +271,12 @@ p, h1, h2, h3, h4, h5, div {
 .single-project-container {
   flex: 1;
   /* height: 50%; */
-  height: 80%;
-  width: 50%;
+  height: 85%;
+  width: 55%;
   position: relative;
   left: 50%;
   top: 15%;
-  background-color: rgba(150,150,150, 0.6);
+  background-color: rgba(150,150,150, 0.9);
   transform: translateX(-50%);
   color: white;
   display: flex;
@@ -266,6 +286,8 @@ p, h1, h2, h3, h4, h5, div {
   outline: none;
   overflow-y: auto;
   flex-wrap: nowrap;
+  box-shadow: -5px 0px 4px -7px rgba(0,0.0,0.16), 5px 0px 4px -7px rgba(0,0.0,0.23), 5px 5px 10px 5px rgba(0,0,0,0.35);
+
 }
 
 #projects-first-div {
@@ -273,7 +295,7 @@ p, h1, h2, h3, h4, h5, div {
 }
 
 .project-header {
-  margin: 0!important;
+  margin-top: 0.5%;
   /* flex: 1 5; */
   /* margin-bottom: -1.5%; */
   /* margin: 0.25%!important; */

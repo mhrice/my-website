@@ -40,7 +40,7 @@ export default class MyCard extends React.Component {
         actAsExpander={true}
         showExpandableButton={true}
          />
-        <CardTitle title={cardTitle} subtitle={cardSubtitle} expandable={true}  />
+        {cardTitle &&<CardTitle title={cardTitle} subtitle={cardSubtitle} expandable={true}  /> }
         <CardText expandable={true}>
         {cardText}
         </CardText>
