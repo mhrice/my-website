@@ -49,6 +49,13 @@ p, h1, h2, h3, h4, h5, div {
   .single-project-container {
     width: 100%!important;
   }
+  .about-description-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-text-container {
+    width: 100%!important;
+  }
 }
 
 
