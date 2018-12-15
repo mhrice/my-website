@@ -89,10 +89,10 @@ export default class About extends React.Component {
             where I am working on a B.S. in Electrical Engineering with a minor in music.
             Originally from beautiful Manhattan Beach, California, I have developed
             passions in music, math, and computer science. I'm an experienced front-of-house
-            engineer having worked over 200 concerts with artists such as Nate Smith, FLETCHER, and JMSN.
-            I also a proficient programmer having worked on many software projects
-            as part of my coursework and for industry. I have extensive course work in signal processing,
-            and focus on applying DSP algorithms to music. Check out my background below
+            engineer having mixed over 200 concerts with artists such as Nate Smith, FLETCHER, and JMSN.
+            I'm also a proficient programmer with many academic and industry software projects
+            under my belt. Furthemore, I have extensive course work in signal processing,
+            and focus on applying DSP algorithms for musical purposes. Check out my background below
             or click on the projects tab to see my skills in action.
             </CardText>
           </Card>
