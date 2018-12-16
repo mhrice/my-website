@@ -132,7 +132,7 @@ let projects = [
     subHeaderText: "Producer",
     bodyText: <div>I recorded, mixed, and mastered this album for a friend of
     mine, Brian Frulla. This was recorded in spring of 2017 at my appartment
-    with the a condenser mic (AT2020), as well as an EIE Pro Audio Interface
+    with a condenser mic (AT2020), as well as an EIE Pro Audio Interface
     and a pair of Rockit KRK 8's. The genre is acoustic. For the most of the
     tracks, there were only two inputs, Brian's guitar and his vocals, except
     for the last track which featured Chris Mukiibi with extra vocals.
@@ -247,7 +247,7 @@ export default class Projects extends React.Component {
         key={this.state.project.key}
         theKey={this.state.project.key}
         tabIndex={-1}
-        
+
         />
       </Modal>
 

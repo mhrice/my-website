@@ -23,14 +23,14 @@ export default class About extends React.Component {
         cardSubtitle: "B.S. Electrical Engineering Class of 2019, Minor in Music",
         cardText: <div id="education-list">Course Work Includes:
           <ul>
-          <li id="education-list-text">Acoustics</li>
-          <li id="education-list-text">Analog/Digital Design</li>
-          <li id="education-list-text">Algorithms</li>
-          <li id="education-list-text">Computer Music</li>
-          <li id="education-list-text">Data Structures</li>
-          <li id="education-list-text">Digital Signal Processing</li>
-          <li id="education-list-text">Music Programming</li>
-          <li id="education-list-text">Recording</li>
+          <li id="education-list-text" className="list-item">Acoustics</li>
+          <li id="education-list-text" className="list-item">Analog/Digital Design</li>
+          <li id="education-list-text" className="list-item">Algorithms</li>
+          <li id="education-list-text" className="list-item">Computer Music</li>
+          <li id="education-list-text" className="list-item">Data Structures</li>
+          <li id="education-list-text" className="list-item">Digital Signal Processing</li>
+          <li id="education-list-text" className="list-item">Music Programming</li>
+          <li id="education-list-text" className="list-item">Recording</li>
           </ul>
         </div>,
         key: 1
@@ -44,16 +44,16 @@ export default class About extends React.Component {
         Logo: InterestsLogo,
         cardTitle: "A few things that I enjoy: ",
         cardText: <ul>
-          <li id="education-list-text">Web App Development</li>
-          <li id="education-list-text">Data Science/Machine Learning</li>
-          <li id="education-list-text">Music Production (click&nbsp;
+          <li id="education-list-text" className="list-item">Web App Development</li>
+          <li id="education-list-text" className="list-item">Data Science/Machine Learning</li>
+          <li id="education-list-text" className="list-item">Music Production (click&nbsp;
             <a href="https://www.soundcloud.com/matthew-rice-6"
             className="soundcloud-link">here&nbsp;</a>
             for a link to my SoundCloud)
           </li>
-          <li id="education-list-text">Classical Piano</li>
-          <li id="education-list-text">Digital Signal Processing</li>
-          <li id="education-list-text">Live Sound</li>
+          <li id="education-list-text" className="list-item">Classical Piano</li>
+          <li id="education-list-text" className="list-item">Digital Signal Processing</li>
+          <li id="education-list-text" className="list-item">Live Sound</li>
         </ul>,
         key: 3
       }
@@ -85,15 +85,21 @@ export default class About extends React.Component {
           <CardText className="about-text">
           <div className="about-greeting-container"><div className="about-greeting">Hello!</div></div>
           <div className="about-name">I'm Matthew Rice</div>
-            I'm a current undergraduate at UC San Diego
-            where I am working on a B.S. in Electrical Engineering with a minor in music.
-            Originally from beautiful Manhattan Beach, California, I have developed
-            passions in music, math, and computer science. I'm an experienced front-of-house
-            engineer having mixed over 200 concerts with artists such as Nate Smith, FLETCHER, and JMSN.
-            I'm also a proficient programmer with many academic and industry software projects
-            under my belt. Furthemore, I have extensive course work in signal processing,
-            and focus on applying DSP algorithms for musical purposes. Check out my background below
-            or click on the projects tab to see my skills in action.
+            <div className="about-text-description">
+              I'm a current undergraduate at UC San Diego where I am working on a
+              B.S. in Electrical Engineering with a minor in music.
+              Originally from beautiful Manhattan Beach, California, I have developed
+              passions in music, math, and computer science. I'm a:
+              <ul>
+                <li className="list-item">DSP enthusiast with extensive course work in signal processing,
+                and I focus on applying DSP algorithms for musical purposes</li>
+                <li className="list-item">Proficient programmer with many academic and industry software projects
+                under my belt </li>
+                <li className="list-item">Experienced front-of-house engineer having mixed over 200 concerts
+                with artists such as Nate Smith, FLETCHER, and JMSN</li>
+              </ul>
+              Check out my background below or click on the projects tab to see my skills in action
+            </div>
             </CardText>
           </Card>
         </div>
