@@ -104,7 +104,8 @@ export default class About extends React.Component {
                 <div className="about-list-row">
                   <img src={Code} className="list-icon"/>
                   <div className="list-text">Proficient programmer with many academic
-                  and industry software projects under my belt
+                  and industry software projects related to data structures,
+                  embedded systems, and audio
                   </div>
                 </div>
                 <div className="about-list-row">
