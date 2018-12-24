@@ -59,6 +59,8 @@ p, h1, h2, h3, h4, h5, div {
   .profile-image {
     margin-bottom: 2%;
   }
+
+
 }
 
 
@@ -109,6 +111,7 @@ p, h1, h2, h3, h4, h5, div {
   font-size: 1.5em;
   color: black;
   user-select: none;
+  cursor: pointer;
 }
 
 .menu-text:visited {
@@ -201,11 +204,27 @@ ul {
   margin-block-end: 0.5em;
 }
 
+.list-icon {
+  flex: 1;
+  height: 2em;
+}
+
+.about-list {
+padding: 0.5em 0;
+}
+
+
+.about-list-row {
+  display: flex;
+}
+
+
+.list-text {
+  flex: 10;
+}
 
 .list-item:before {
   content: '\2022';
-   /* For a square bullet */
-   /*content:'\25A0';*/
    position: relative;
    max-width: 0;
    max-height: 0;
@@ -273,6 +292,7 @@ ul {
   font-size: 1.2em!important;
   /* color: white!important; */
   border: 0px!important;
+  padding-bottom: 0px!important;
 }
 .about-text-container::-webkit-scrollbar {
   width: 0px;

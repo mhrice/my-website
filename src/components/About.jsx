@@ -7,6 +7,10 @@ import EducationLogo from "../resources/books.svg";
 import InterestsLogo from "../resources/heart.svg";
 import SkillsPic from "../resources/sup.svg";
 import ProfPic from "../resources/facebook_prof_pic.png";
+import Mixer from "../resources/mixer.svg";
+import DSP from "../resources/dsp.svg";
+import Code from "../resources/code.svg";
+
 import {Card, CardHeader, CardTitle, CardText} from 'material-ui/Card';
 
 export default class About extends React.Component {
@@ -87,17 +91,29 @@ export default class About extends React.Component {
           <div className="about-name">I'm Matthew Rice</div>
             <div className="about-text-description">
               I'm a current undergraduate at UC San Diego where I am working on a
-              B.S. in Electrical Engineering with a minor in music.
+              B.S. in Electrical Engineering with a minor in Music.
               Originally from beautiful Manhattan Beach, California, I have developed
               passions in music, math, and computer science. I'm a:
-              <ul>
-                <li className="list-item">DSP enthusiast with extensive course work in signal processing,
-                and I focus on applying DSP algorithms for musical purposes</li>
-                <li className="list-item">Proficient programmer with many academic and industry software projects
-                under my belt </li>
-                <li className="list-item">Experienced front-of-house engineer having mixed over 200 concerts
-                with artists such as Nate Smith, FLETCHER, and JMSN</li>
-              </ul>
+              <div className="about-list">
+                <div className="about-list-row">
+                  <img src={DSP} className="list-icon"/>
+                  <div className="list-text">DSP enthusiast with extensive course work in signal processing,
+                  and I focus on applying DSP algorithms for musical purposes
+                  </div>
+                </div>
+                <div className="about-list-row">
+                  <img src={Code} className="list-icon"/>
+                  <div className="list-text">Proficient programmer with many academic
+                  and industry software projects under my belt
+                  </div>
+                </div>
+                <div className="about-list-row">
+                  <img src={Mixer} className="list-icon"/>
+                  <div className="list-text">Experienced front-of-house engineer
+                  having mixed over 200 concerts with artists such as Nate Smith, FLETCHER, and JMSN
+                  </div>
+                </div>
+              </div>
               Check out my background below or click on the projects tab to see my skills in action
             </div>
             </CardText>
@@ -105,7 +121,7 @@ export default class About extends React.Component {
         </div>
 
         {this.renderCards()}
-
+<div style={{fontSize: "0.5em"}}>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
       </div>
     )
   }
