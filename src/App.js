@@ -46,10 +46,10 @@ class App extends Component {
       <MuiThemeProvider>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
-
-        <link rel="stylesheet"
+      <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Muli">
-    </link>
+      </link>
+
 
         <Nav></Nav>
 

@@ -49,7 +49,7 @@ renderMenu(){
 }
   render() {
     return (
-      <div>
+      <div className="nav-container">
 
       <MediaQuery maxDeviceWidth={800}>
       <AppBar

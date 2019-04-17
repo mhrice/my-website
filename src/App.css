@@ -70,6 +70,10 @@ p, h1, h2, h3, h4, h5, div {
   display: flex;
   justify-content: center;
 }
+.nav-container {
+  z-index: 20;
+  height: 10vh;
+}
 
 .nav-app-bar {
   background-color: transparent!important;
@@ -190,7 +194,6 @@ p, h1, h2, h3, h4, h5, div {
 .about-container {
   width: 100%;
   height: 100%;
-  padding-top: 8%;
 }
 
 .about-header {
@@ -380,7 +383,7 @@ padding: 0.5em 0;
 
 .projects-container {
   height: 100vh;
-  padding-top: 8%;
+  /* padding-top: 8%; */
   margin-left: 2%;
   margin-right: 2%;
 
