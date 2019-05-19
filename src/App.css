@@ -7,6 +7,8 @@
   padding-top: 0px;
   justify-content: space-between;
   min-height: 98vh;
+  width: 100vw;
+  /* border: 2px solid black; */
 }
 
 html {
@@ -58,6 +60,7 @@ p, h1, h2, h3, h4, h5, div {
   }
   .profile-image {
     margin-bottom: 2%;
+    width: 100%!important;
   }
 
 
@@ -73,6 +76,7 @@ p, h1, h2, h3, h4, h5, div {
 .nav-container {
   z-index: 20;
   height: 10vh;
+  width: 100vw;
 }
 
 .nav-app-bar {
@@ -282,7 +286,7 @@ padding: 0.5em 0;
 .profile-image {
   height:100%;
   width: 12rem;
-  flex: 1.2;
+  flex: 1.2 0.2 20px;
 }
 .about-text-container {
   flex: 3;

@@ -51,19 +51,20 @@ renderMenu(){
     return (
       <div className="nav-container">
 
-      <MediaQuery maxDeviceWidth={800}>
-      <AppBar
-      className="nav-app-bar"
-      showMenuIconButton = {this.state.showIcon}
-      onLeftIconButtonTouchTap = {this.showMenu.bind(this)}
-      >
-      <button onClick= {this.showMenu.bind(this)} className="hidden-button"> </button>
+      {/* <MediaQuery maxDeviceWidth={800}> */}
+      {window.screen.width < 800 ?
+      <React.Fragment>
+        <AppBar
+        className="nav-app-bar"
+        showMenuIconButton = {this.state.showIcon}
+        onLeftIconButtonTouchTap = {this.showMenu.bind(this)}
+        >
+        <button onClick= {this.showMenu.bind(this)} className="hidden-button"> </button>
 
-      </AppBar>
-
-      {this.renderMenu()}
-      </MediaQuery>
-      <MediaQuery minDeviceWidth={800}>
+        </AppBar>
+        {this.renderMenu()}
+      </React.Fragment>
+      : 
 
 
         <div>
@@ -86,7 +87,9 @@ renderMenu(){
             </li>
           </ul>
         </div>
-  </MediaQuery>
+      }
+      
+  {/* </MediaQuery> */}
       </div>
     );
   }
